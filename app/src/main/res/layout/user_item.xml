@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingVertical="@dimen/vertical_padding">
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/profile_picture"
+        android:layout_width="@dimen/profile_picture_size"
+        android:layout_height="@dimen/profile_picture_size"
+        android:layout_margin="@dimen/standard_padding"
+        android:background="@drawable/circular_image"
+        android:src="@drawable/example"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/user_name"
+        android:layout_width="@dimen/match_constraint"
+        android:layout_height="wrap_content"
+        android:ellipsize="end"
+        android:paddingHorizontal="@dimen/standard_padding"
+        app:layout_constraintBottom_toTopOf="@+id/age_location"
+        app:layout_constraintEnd_toStartOf="@id/attachment"
+        app:layout_constraintStart_toEndOf="@+id/profile_picture"
+        app:layout_constraintTop_toTopOf="@+id/profile_picture"
+        tools:text="User's Full Name" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/age_location"
+        android:layout_width="@dimen/match_constraint"
+        android:layout_height="wrap_content"
+        android:paddingHorizontal="@dimen/standard_padding"
+        app:layout_constraintBottom_toBottomOf="@+id/profile_picture"
+        app:layout_constraintEnd_toStartOf="@id/attachment"
+        app:layout_constraintStart_toEndOf="@id/profile_picture"
+        app:layout_constraintTop_toBottomOf="@+id/user_name"
+        tools:text="24 years from UK" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/attachment"
+        android:layout_width="@dimen/small_size"
+        android:layout_height="@dimen/small_size"
+        android:layout_marginHorizontal="@dimen/vertical_padding"
+        android:src="@drawable/ic_paperclip_horizontal"
+        android:tint="@android:color/darker_gray"
+        app:layout_constraintBottom_toBottomOf="@id/user_name"
+        app:layout_constraintEnd_toStartOf="@id/timezone"
+        app:layout_constraintTop_toTopOf="@id/user_name" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/timezone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="@id/user_name"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/user_name"
+        tools:text="19:58" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/favorite"
+        android:layout_width="@dimen/small_size"
+        android:layout_height="@dimen/small_size"
+        android:src="@drawable/ic_star"
+        android:tint="@android:color/darker_gray"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@id/timezone"
+        app:layout_constraintTop_toBottomOf="@id/profile_picture" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

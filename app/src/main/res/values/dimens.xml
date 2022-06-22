@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="small_size">24dp</dimen>
+    <dimen name="match_constraint">0dp</dimen>
+
+    <dimen name="medium_size">36dp</dimen>
+    <dimen name="large_size">48dp</dimen>
+
+    <dimen name="profile_picture_size">56dp</dimen>
+    <dimen name="standard_padding">16dp</dimen>
+    <dimen name="vertical_padding">8dp</dimen>
+</resources>
